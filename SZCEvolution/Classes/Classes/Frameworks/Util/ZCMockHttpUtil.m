@@ -38,7 +38,11 @@
         NSString * urlString = request.URL.absoluteString;
         
         if ([urlString containsString:@"http://www.baidu.com"]) {
-            return [[OHHTTPStubsResponse responseWithJSONObject:@{@"ADAPTER":@"http://m6.g13p.com/j0/girl13.com-2016-09-26-16-57-08_7h.jpg"} statusCode:statusCode headers:nil] requestTime:requestTime responseTime:responseTime];
+            
+            NSError* notConnectedError = [NSError errorWithDomain:NSURLErrorDomain code:kCFURLErrorNotConnectedToInternet userInfo:nil];
+            return [OHHTTPStubsResponse responseWithError:notConnectedError];
+            
+            //return [[OHHTTPStubsResponse responseWithJSONObject:@{@"ADAPTER":@"http://m6.g13p.com/j0/girl13.com-2016-09-26-16-57-08_7h.jpg"} statusCode:statusCode headers:nil] requestTime:requestTime responseTime:responseTime];
         }
         //else if (<#expression#>){}
         return nil;

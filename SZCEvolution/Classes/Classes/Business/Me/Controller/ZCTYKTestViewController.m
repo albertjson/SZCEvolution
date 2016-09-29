@@ -8,9 +8,12 @@
 
 #import "ZCTYKTestViewController.h"
 #import "ZCMeGetInfoManger.h"
+#import <WMHUDUntil.h>
 
 @interface ZCTYKTestViewController ()
-
+{
+    ZCMeGetInfoManger * manger;
+}
 @end
 
 @implementation ZCTYKTestViewController
@@ -27,11 +30,15 @@
     switch (sender.tag) {
         case 1:
         {
-            ZCMeGetInfoManger * manger = [ZCMeGetInfoManger new];
+            manger = [ZCMeGetInfoManger new];
+            manger.animatingView = self.view;
+            //manger.animatingText = @"加载中";
             [manger startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
                 NSLog(@"heheda = %@",request.responseJSONObject);
             } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
                 NSLog(@"fail = %@",request);
+                //[WMHUDUntil showFailWithMessage:@"难道就失败了吗" toView:self.view];
+
             }];
         }
             break;
@@ -54,6 +61,11 @@
         default:
             break;
     }
+}
+- (void)dealloc
+{
+    NSLog(@"ZCTYKTestViewController dealloc");
+    [manger stop];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

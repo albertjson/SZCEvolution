@@ -16,13 +16,17 @@
 		0C9E7DE71D9D16C7009D006C /* ZCMockHttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7DE61D9D16C7009D006C /* ZCMockHttpUtil.m */; };
 		0CE39BEB1D87F29E00BDBFE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE39BEA1D87F29E00BDBFE4 /* main.m */; };
 		0CE39BEE1D87F29E00BDBFE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE39BED1D87F29E00BDBFE4 /* AppDelegate.m */; };
-		0CE39BF11D87F29E00BDBFE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE39BF01D87F29E00BDBFE4 /* ViewController.m */; };
 		0CE39BF41D87F29E00BDBFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE39BF21D87F29E00BDBFE4 /* Main.storyboard */; };
 		0CE39BF61D87F29E00BDBFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CE39BF51D87F29E00BDBFE4 /* Assets.xcassets */; };
 		0CE39BF91D87F29E00BDBFE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE39BF71D87F29E00BDBFE4 /* LaunchScreen.storyboard */; };
 		0CE39C041D87F29E00BDBFE4 /* SZCEvolutionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE39C031D87F29E00BDBFE4 /* SZCEvolutionTests.m */; };
 		0CE39C0F1D87F29E00BDBFE4 /* SZCEvolutionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE39C0E1D87F29E00BDBFE4 /* SZCEvolutionUITests.m */; };
 		CDAD4203839909C7E06A092C /* libPods-SZCEvolution.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90994D628C6B6FB9C195F239 /* libPods-SZCEvolution.a */; };
+		D2A25DCB1D9D633C00114E01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A25DC91D9D633C00114E01 /* ViewController.m */; };
+		D2A25DD91D9D709500114E01 /* YTKAnimatingRequestAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A25DD21D9D709500114E01 /* YTKAnimatingRequestAccessory.m */; };
+		D2A25DDA1D9D709500114E01 /* YTKBaseRequest+AnimatingAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A25DD41D9D709500114E01 /* YTKBaseRequest+AnimatingAccessory.m */; };
+		D2A25DDB1D9D709500114E01 /* YTKBatchRequest+AnimatingAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A25DD61D9D709500114E01 /* YTKBatchRequest+AnimatingAccessory.m */; };
+		D2A25DDC1D9D709500114E01 /* YTKChainRequest+AnimatingAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A25DD81D9D709500114E01 /* YTKChainRequest+AnimatingAccessory.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,8 +66,6 @@
 		0CE39BEA1D87F29E00BDBFE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0CE39BEC1D87F29E00BDBFE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SZCEvolution/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		0CE39BED1D87F29E00BDBFE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SZCEvolution/AppDelegate.m; sourceTree = SOURCE_ROOT; };
-		0CE39BEF1D87F29E00BDBFE4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../../../../ViewController.h; sourceTree = "<group>"; };
-		0CE39BF01D87F29E00BDBFE4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../../../../ViewController.m; sourceTree = "<group>"; };
 		0CE39BF31D87F29E00BDBFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0CE39BF51D87F29E00BDBFE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CE39BF81D87F29E00BDBFE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +79,16 @@
 		65E1A8905760852B5503EEE7 /* Pods-SZCEvolution.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZCEvolution.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SZCEvolution/Pods-SZCEvolution.debug.xcconfig"; sourceTree = "<group>"; };
 		90994D628C6B6FB9C195F239 /* libPods-SZCEvolution.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SZCEvolution.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7BC9C7DC8DCD4BD37B663C /* Pods-SZCEvolution.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZCEvolution.release.xcconfig"; path = "Pods/Target Support Files/Pods-SZCEvolution/Pods-SZCEvolution.release.xcconfig"; sourceTree = "<group>"; };
+		D2A25DC91D9D633C00114E01 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = SZCEvolution/ViewController.m; sourceTree = SOURCE_ROOT; };
+		D2A25DCA1D9D633C00114E01 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = SZCEvolution/ViewController.h; sourceTree = SOURCE_ROOT; };
+		D2A25DD11D9D709500114E01 /* YTKAnimatingRequestAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKAnimatingRequestAccessory.h; sourceTree = "<group>"; };
+		D2A25DD21D9D709500114E01 /* YTKAnimatingRequestAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKAnimatingRequestAccessory.m; sourceTree = "<group>"; };
+		D2A25DD31D9D709500114E01 /* YTKBaseRequest+AnimatingAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YTKBaseRequest+AnimatingAccessory.h"; sourceTree = "<group>"; };
+		D2A25DD41D9D709500114E01 /* YTKBaseRequest+AnimatingAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YTKBaseRequest+AnimatingAccessory.m"; sourceTree = "<group>"; };
+		D2A25DD51D9D709500114E01 /* YTKBatchRequest+AnimatingAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YTKBatchRequest+AnimatingAccessory.h"; sourceTree = "<group>"; };
+		D2A25DD61D9D709500114E01 /* YTKBatchRequest+AnimatingAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YTKBatchRequest+AnimatingAccessory.m"; sourceTree = "<group>"; };
+		D2A25DD71D9D709500114E01 /* YTKChainRequest+AnimatingAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YTKChainRequest+AnimatingAccessory.h"; sourceTree = "<group>"; };
+		D2A25DD81D9D709500114E01 /* YTKChainRequest+AnimatingAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YTKChainRequest+AnimatingAccessory.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +153,8 @@
 			children = (
 				0CE39BEC1D87F29E00BDBFE4 /* AppDelegate.h */,
 				0CE39BED1D87F29E00BDBFE4 /* AppDelegate.m */,
-				0CE39BEF1D87F29E00BDBFE4 /* ViewController.h */,
-				0CE39BF01D87F29E00BDBFE4 /* ViewController.m */,
+				D2A25DCA1D9D633C00114E01 /* ViewController.h */,
+				D2A25DC91D9D633C00114E01 /* ViewController.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -336,6 +348,7 @@
 			children = (
 				0C9E7DDE1D9D1499009D006C /* ZCBaseRequest.h */,
 				0C9E7DDF1D9D1499009D006C /* ZCBaseRequest.m */,
+				D2A25DD01D9D709500114E01 /* Accessory */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -471,6 +484,21 @@
 				BE7BC9C7DC8DCD4BD37B663C /* Pods-SZCEvolution.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2A25DD01D9D709500114E01 /* Accessory */ = {
+			isa = PBXGroup;
+			children = (
+				D2A25DD11D9D709500114E01 /* YTKAnimatingRequestAccessory.h */,
+				D2A25DD21D9D709500114E01 /* YTKAnimatingRequestAccessory.m */,
+				D2A25DD31D9D709500114E01 /* YTKBaseRequest+AnimatingAccessory.h */,
+				D2A25DD41D9D709500114E01 /* YTKBaseRequest+AnimatingAccessory.m */,
+				D2A25DD51D9D709500114E01 /* YTKBatchRequest+AnimatingAccessory.h */,
+				D2A25DD61D9D709500114E01 /* YTKBatchRequest+AnimatingAccessory.m */,
+				D2A25DD71D9D709500114E01 /* YTKChainRequest+AnimatingAccessory.h */,
+				D2A25DD81D9D709500114E01 /* YTKChainRequest+AnimatingAccessory.m */,
+			);
+			path = Accessory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -655,11 +683,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A25DD91D9D709500114E01 /* YTKAnimatingRequestAccessory.m in Sources */,
 				0C9E7DD31D9CFDD7009D006C /* ZCBaseViewController.m in Sources */,
 				0C9E7DE31D9D150F009D006C /* ZCMeGetInfoManger.m in Sources */,
-				0CE39BF11D87F29E00BDBFE4 /* ViewController.m in Sources */,
 				0C9E7DD61D9CFDED009D006C /* ZCBaseTableViewController.m in Sources */,
+				D2A25DDC1D9D709500114E01 /* YTKChainRequest+AnimatingAccessory.m in Sources */,
 				0C9E7DE71D9D16C7009D006C /* ZCMockHttpUtil.m in Sources */,
+				D2A25DDA1D9D709500114E01 /* YTKBaseRequest+AnimatingAccessory.m in Sources */,
+				D2A25DDB1D9D709500114E01 /* YTKBatchRequest+AnimatingAccessory.m in Sources */,
+				D2A25DCB1D9D633C00114E01 /* ViewController.m in Sources */,
 				0C9E7DE01D9D1499009D006C /* ZCBaseRequest.m in Sources */,
 				0CE39BEE1D87F29E00BDBFE4 /* AppDelegate.m in Sources */,
 				0C9E7DDC1D9CFF60009D006C /* ZCTYKTestViewController.m in Sources */,

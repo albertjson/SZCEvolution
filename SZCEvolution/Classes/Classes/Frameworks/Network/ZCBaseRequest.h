@@ -7,6 +7,7 @@
 //
 
 #import <YTKNetwork/YTKNetwork.h>
+#import "YTKBaseRequest+AnimatingAccessory.h"
 
 @interface ZCBaseRequest : YTKRequest
 
