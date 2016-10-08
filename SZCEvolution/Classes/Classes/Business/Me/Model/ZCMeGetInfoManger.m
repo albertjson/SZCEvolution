@@ -66,7 +66,7 @@
 
 - (nullable id)jsonValidator
 {
-    return @{@"haha":[NSNumber class]};
+    return @{@"haha":[NSObject class]};
 }
 #pragma mark - private method
 - (UIViewController*) findBestViewController:(UIViewController*)vc {

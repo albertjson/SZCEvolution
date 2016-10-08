@@ -42,7 +42,7 @@
 //            NSError* notConnectedError = [NSError errorWithDomain:NSURLErrorDomain code:kCFURLErrorNotConnectedToInternet userInfo:nil];
 //            return [OHHTTPStubsResponse responseWithError:notConnectedError];
             
-            return [[OHHTTPStubsResponse responseWithJSONObject:@{@"ADAPTER2":@"http://m6.g13p.com/j0/girl13.com-2016-09-26-16-57-08_7h.jpg",@"haha":@55} statusCode:statusCode headers:nil] requestTime:requestTime responseTime:responseTime];
+            return [[OHHTTPStubsResponse responseWithJSONObject:@{@"ADAPTER2":@"http://m6.g13p.com/j0/girl13.com-2016-09-26-16-57-08_7h.jpg",@"haha":[NSNull null]} statusCode:statusCode headers:nil] requestTime:requestTime responseTime:responseTime];
         }
         //else if (<#expression#>){}
         return nil;

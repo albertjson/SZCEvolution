@@ -10,13 +10,8 @@
 
 @implementation ZCBaseRequest
 
-//此方法可以封装一些错误的处理，子类可以继承重写。但是子类继承的时候建议    [super requestFailedFilter];
 
-- (void)requestFailedFilter
-{
-    NSLog(@"我失败了111想");
-}
-/**
+/*
  1. 若需要定义json--model，可在以下方法中处理  class ： YTKNetworkAgent
  - (void)handleRequestResult:(NSURLSessionTask *)task responseObject:(id)responseObject
  2. 需要进一步处理error，例如error message定义等等，也在上面方法进行处理
@@ -26,5 +21,45 @@
  @param failure <#failure description#>
  */
 
+/*
+///  The validator will be used to test if `responseJSONObject` is correctly formed.
+- (nullable id)jsonValidator
+{
+    //此方法有两个作用
+    1. 校验返回的数据格式与此方法内数据格式是否一致[此方法内可缺省，不是所有参数都要写，但是必须要写，为了统一处理错误]
+    2. 校验返回的数据字段类型，防止给不符合该字段的类型导致程序的异常
+    如果返回的数据有可能为null，则格式需指定为NSObject类型的
+}
+ */
+
+//以下四个方法子类可以原始拥有，也可以`[super requestCompletePreprocessor];`进行基础上编写，也可以直接重写。但是一般情况下建议继承的基础上
+
+///  Called on background thread after request succeded but before switching to main thread. Note if
+///  cache is loaded, this method WILL be called on the main thread, just like `requestCompleteFilter`.
+- (void)requestCompletePreprocessor
+{
+    
+}
+
+///  Called on the main thread after request succeeded.
+- (void)requestCompleteFilter
+{
+    
+}
+
+///  Called on background thread after request succeded but before switching to main thread. See also
+///  `requestCompletePreprocessor`.
+- (void)requestFailedPreprocessor
+{
+    //可以在此方法内处理token失效的情况，所有http请求统一走此方法，即会统一调用
+
+    //note：子类如需继承，必须必须调用 [super requestFailedPreprocessor];
+}
+
+///  Called on the main thread when request failed.
+- (void)requestFailedFilter
+{
+    
+}
 
 @end

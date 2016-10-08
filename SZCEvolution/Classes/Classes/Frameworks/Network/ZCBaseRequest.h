@@ -12,3 +12,7 @@
 @interface ZCBaseRequest : YTKRequest
 
 @end
+/*
+ 1. 取消网络请求，在dealloc中调用 [request stop]方法
+ 2. 
+ */
