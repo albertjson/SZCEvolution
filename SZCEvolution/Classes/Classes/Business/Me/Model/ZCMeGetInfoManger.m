@@ -56,9 +56,17 @@
 }
 - (void)requestFailedFilter
 {
+    [super requestFailedFilter];
+    
+    NSLog(@"我失败了222");
     UIWindow *window = [[UIApplication sharedApplication] keyWindow];
     
     [WMHUDUntil showFailWithMessage:@"难道就失败了吗" toView:window];
+}
+
+- (nullable id)jsonValidator
+{
+    return @{@"haha":[NSNumber class]};
 }
 #pragma mark - private method
 - (UIViewController*) findBestViewController:(UIViewController*)vc {
