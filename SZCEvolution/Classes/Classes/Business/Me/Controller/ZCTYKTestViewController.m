@@ -9,6 +9,7 @@
 #import "ZCTYKTestViewController.h"
 #import "ZCMeGetInfoManger.h"
 #import <WMHUDUntil.h>
+#import "ZCGetInfoModel.h"
 
 @interface ZCTYKTestViewController ()
 {
@@ -35,6 +36,8 @@
             //manger.animatingText = @"加载中";
             [manger startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
                 NSLog(@"heheda = %@",BASERequest.responseJSONObject);
+                NSLog(@"jjjjj=%@",manger.result);
+                                
             } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
                 
                 NSLog(@"fail = %@",BASERequest.error);

@@ -23,6 +23,8 @@
 		0CE39C041D87F29E00BDBFE4 /* SZCEvolutionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE39C031D87F29E00BDBFE4 /* SZCEvolutionTests.m */; };
 		0CE39C0F1D87F29E00BDBFE4 /* SZCEvolutionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE39C0E1D87F29E00BDBFE4 /* SZCEvolutionUITests.m */; };
 		CDAD4203839909C7E06A092C /* libPods-SZCEvolution.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90994D628C6B6FB9C195F239 /* libPods-SZCEvolution.a */; };
+		D20104061DAA8FE700F0E7E2 /* ZCJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D20104051DAA8FE700F0E7E2 /* ZCJSONModel.m */; };
+		D20104091DAA90FB00F0E7E2 /* ZCGetInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D20104081DAA90FB00F0E7E2 /* ZCGetInfoModel.m */; };
 		D2A25DCB1D9D633C00114E01 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A25DC91D9D633C00114E01 /* ViewController.m */; };
 		D2A25DD91D9D709500114E01 /* YTKAnimatingRequestAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A25DD21D9D709500114E01 /* YTKAnimatingRequestAccessory.m */; };
 		D2A25DDA1D9D709500114E01 /* YTKBaseRequest+AnimatingAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A25DD41D9D709500114E01 /* YTKBaseRequest+AnimatingAccessory.m */; };
@@ -82,6 +84,10 @@
 		65E1A8905760852B5503EEE7 /* Pods-SZCEvolution.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZCEvolution.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SZCEvolution/Pods-SZCEvolution.debug.xcconfig"; sourceTree = "<group>"; };
 		90994D628C6B6FB9C195F239 /* libPods-SZCEvolution.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SZCEvolution.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7BC9C7DC8DCD4BD37B663C /* Pods-SZCEvolution.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZCEvolution.release.xcconfig"; path = "Pods/Target Support Files/Pods-SZCEvolution/Pods-SZCEvolution.release.xcconfig"; sourceTree = "<group>"; };
+		D20104041DAA8FE700F0E7E2 /* ZCJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCJSONModel.h; sourceTree = "<group>"; };
+		D20104051DAA8FE700F0E7E2 /* ZCJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCJSONModel.m; sourceTree = "<group>"; };
+		D20104071DAA90FB00F0E7E2 /* ZCGetInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCGetInfoModel.h; sourceTree = "<group>"; };
+		D20104081DAA90FB00F0E7E2 /* ZCGetInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCGetInfoModel.m; sourceTree = "<group>"; };
 		D2A25DC91D9D633C00114E01 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = SZCEvolution/ViewController.m; sourceTree = SOURCE_ROOT; };
 		D2A25DCA1D9D633C00114E01 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = SZCEvolution/ViewController.h; sourceTree = SOURCE_ROOT; };
 		D2A25DD11D9D709500114E01 /* YTKAnimatingRequestAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKAnimatingRequestAccessory.h; sourceTree = "<group>"; };
@@ -281,6 +287,8 @@
 			children = (
 				0C9E7DE11D9D150F009D006C /* ZCMeGetInfoManger.h */,
 				0C9E7DE21D9D150F009D006C /* ZCMeGetInfoManger.m */,
+				D20104071DAA90FB00F0E7E2 /* ZCGetInfoModel.h */,
+				D20104081DAA90FB00F0E7E2 /* ZCGetInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +361,8 @@
 				0C9E7DDF1D9D1499009D006C /* ZCBaseRequest.m */,
 				0C26D6191DAA3BEE00FD3839 /* ZCHTTPError.h */,
 				0C26D61A1DAA3BEE00FD3839 /* ZCHTTPError.m */,
+				D20104041DAA8FE700F0E7E2 /* ZCJSONModel.h */,
+				D20104051DAA8FE700F0E7E2 /* ZCJSONModel.m */,
 				D2A25DD01D9D709500114E01 /* Accessory */,
 			);
 			path = Network;
@@ -688,6 +698,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D20104091DAA90FB00F0E7E2 /* ZCGetInfoModel.m in Sources */,
+				D20104061DAA8FE700F0E7E2 /* ZCJSONModel.m in Sources */,
 				D2A25DD91D9D709500114E01 /* YTKAnimatingRequestAccessory.m in Sources */,
 				0C9E7DD31D9CFDD7009D006C /* ZCBaseViewController.m in Sources */,
 				0C9E7DE31D9D150F009D006C /* ZCMeGetInfoManger.m in Sources */,

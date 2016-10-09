@@ -68,6 +68,15 @@
 {
     return @{@"haha":[NSObject class]};
 }
+- (NSString*)modelClassName
+{
+    NSLog(@"我是儿子");
+    return @"ZCGetInfoModel";
+}
+- (ZCGetInfoModel*)result
+{
+    return (ZCGetInfoModel*)[self getParseJSONModel];
+}
 #pragma mark - private method
 - (UIViewController*) findBestViewController:(UIViewController*)vc {
     

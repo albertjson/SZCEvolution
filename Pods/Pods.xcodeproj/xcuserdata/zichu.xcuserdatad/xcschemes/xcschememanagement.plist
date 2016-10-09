@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>JSONModel.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -47,6 +52,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>01530EB4C0B038BF6B5548B9AADEA1AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>260D0B7EF40C832AA545C533F40E42BD</key>
 		<dict>
 			<key>primary</key>
@@ -77,12 +87,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>889AD944ADEDD1699ACD42681C51793D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>BED4E35309245A381655EAED08649BBC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D058B89EB3B3DF45457A2DCD3971AFFE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E89EA0620E22EDB775A7C107518644DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

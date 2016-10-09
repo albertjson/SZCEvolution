@@ -9,10 +9,29 @@
 #import "ZCBaseRequest.h"
 #import "ZCHTTPError.h"
 #import <AFNetworking.h>
+#import <JSONModel.h>
+
+@interface ZCBaseRequest()
+{
+    id _responseModel;
+}
+
+@end
 
 @implementation ZCBaseRequest
 
-
+- (instancetype)getParseJSONModel
+{
+    NSString * modelClassName = [self modelClassName];
+    if (modelClassName==nil||[modelClassName isEqualToString:@""]) {
+        return self.responseJSONObject;
+    }
+    return _responseModel;
+}
+- (NSString*)modelClassName;
+{
+    return nil;
+}
 /*
  1. 若需要定义json--model，可在以下方法中处理  class ： YTKNetworkAgent
  - (void)handleRequestResult:(NSURLSessionTask *)task responseObject:(id)responseObject
@@ -41,6 +60,34 @@
 - (void)requestCompletePreprocessor
 {
     //json转model
+    [self JSONConvertModel];
+}
+- (void)JSONConvertModel
+{
+    NSLog(@"---%@",[self modelClassName]);
+    
+    NSString * modelClassName = [self modelClassName];
+    if (!modelClassName||[modelClassName isEqualToString:@""]) {
+        return;
+    }
+    Class modelClass = NSClassFromString(modelClassName);
+    
+    NSError * error = nil;
+    
+    if ([self.responseJSONObject isKindOfClass:[NSDictionary class]]) {
+        
+        _responseModel = [[modelClass alloc] initWithDictionary:self.responseJSONObject error:&error];
+        
+    }else if ([self.responseJSONObject isKindOfClass:[NSArray class]]){
+        
+        _responseModel = [modelClass arrayOfModelsFromDictionaries:self.responseJSONObject error:&error];
+        
+    }else{
+        //此处为请求成功但是返回的数据既不是字典又不是数组，理论上是"<null>"但是这里不需要做处理,AF已过滤掉
+    }
+    
+    //后面可以换成断言
+    NSLog(@"[ZCBaseRequest]--[JSONMODELError]=%@",error);
 }
 
 ///  Called on the main thread after request succeeded.

@@ -13,10 +13,17 @@
 #define BASERequest  (ZCBaseRequest*)request
 
 @class ZCHTTPError;
+@class ZCJSONModel;
 
 @interface ZCBaseRequest : YTKRequest
 
 @property (nonatomic,strong) ZCHTTPError * httpError;
+
+//获取解析成model的数据<子类只能去调用不能重写>
+- (instancetype)getParseJSONModel;
+
+// model对应的类名，子类实现的话会直接映射到该model类并进行初始化操作
+- (NSString*)modelClassName;
 
 @end
 /*
