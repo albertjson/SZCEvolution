@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '51A28AF6CA435399DBAB57D7'
+               BlueprintIdentifier = '9835E60D12F7EA32E80F1616'
                BlueprintName = 'WMHUDUntil'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libWMHUDUntil.a'>

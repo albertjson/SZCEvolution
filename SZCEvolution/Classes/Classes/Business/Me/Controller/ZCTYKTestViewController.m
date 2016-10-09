@@ -34,9 +34,10 @@
             manger.animatingView = self.view;
             //manger.animatingText = @"加载中";
             [manger startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-                NSLog(@"heheda = %@",request.responseJSONObject);
+                NSLog(@"heheda = %@",BASERequest.responseJSONObject);
             } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-                NSLog(@"fail = %@",request);
+                
+                NSLog(@"fail = %@",BASERequest.error);
                 //[WMHUDUntil showFailWithMessage:@"难道就失败了吗" toView:self.view];
 
             }];

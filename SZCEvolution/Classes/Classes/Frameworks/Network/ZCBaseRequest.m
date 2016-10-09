@@ -7,6 +7,8 @@
 //
 
 #import "ZCBaseRequest.h"
+#import "ZCHTTPError.h"
+#import <AFNetworking.h>
 
 @implementation ZCBaseRequest
 
@@ -38,7 +40,7 @@
 ///  cache is loaded, this method WILL be called on the main thread, just like `requestCompleteFilter`.
 - (void)requestCompletePreprocessor
 {
-    
+    //json转model
 }
 
 ///  Called on the main thread after request succeeded.
@@ -54,6 +56,24 @@
     //可以在此方法内处理token失效的情况，所有http请求统一走此方法，即会统一调用
 
     //note：子类如需继承，必须必须调用 [super requestFailedPreprocessor];
+    
+    NSError * error = self.error;
+    
+    if ([error.domain isEqualToString:AFURLResponseSerializationErrorDomain])
+    {
+        //AFNetworking处理过的错误
+        
+    }else if ([error.domain isEqualToString:YTKRequestValidationErrorDomain])
+    {
+        //猿题库处理过的错误
+        
+    }else{
+        //系统级别的domain错误，无网络等[NSURLErrorDomain]
+        //根据error的code去定义显示的信息，保证显示的内容可以便捷的控制
+    }
+    //初始化httpError的值
+    //self.httpError = [[ZCHTTPError alloc] initWithDomain:<#(nonnull NSErrorDomain)#> code:<#(NSInteger)#> userInfo:<#(nullable NSDictionary *)#>];
+
 }
 
 ///  Called on the main thread when request failed.

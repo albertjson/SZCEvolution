@@ -6,6 +6,7 @@ target :SZCEvolution, :exclusive => true do
    pod 'YTKNetwork'
    pod 'Masonry'
    pod 'OHHTTPStubs'
+   pod 'JSONModel'
    #, :git => 'https://github.com/albertjson/YTKNetwork.git'
    pod 'HHRouter', :git => 'https://github.com/albertjson/HHRouter.git'
 

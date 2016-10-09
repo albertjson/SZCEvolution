@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C26D61B1DAA3BEE00FD3839 /* ZCHTTPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C26D61A1DAA3BEE00FD3839 /* ZCHTTPError.m */; };
 		0C9E7DD31D9CFDD7009D006C /* ZCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7DD21D9CFDD7009D006C /* ZCBaseViewController.m */; };
 		0C9E7DD61D9CFDED009D006C /* ZCBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7DD51D9CFDED009D006C /* ZCBaseTableViewController.m */; };
 		0C9E7DD91D9CFE1D009D006C /* ZCMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7DD81D9CFE1D009D006C /* ZCMeTableViewController.m */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C26D6191DAA3BEE00FD3839 /* ZCHTTPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCHTTPError.h; sourceTree = "<group>"; };
+		0C26D61A1DAA3BEE00FD3839 /* ZCHTTPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCHTTPError.m; sourceTree = "<group>"; };
 		0C9E7DD11D9CFDD7009D006C /* ZCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBaseViewController.h; sourceTree = "<group>"; };
 		0C9E7DD21D9CFDD7009D006C /* ZCBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCBaseViewController.m; sourceTree = "<group>"; };
 		0C9E7DD41D9CFDED009D006C /* ZCBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBaseTableViewController.h; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 			children = (
 				0C9E7DDE1D9D1499009D006C /* ZCBaseRequest.h */,
 				0C9E7DDF1D9D1499009D006C /* ZCBaseRequest.m */,
+				0C26D6191DAA3BEE00FD3839 /* ZCHTTPError.h */,
+				0C26D61A1DAA3BEE00FD3839 /* ZCHTTPError.m */,
 				D2A25DD01D9D709500114E01 /* Accessory */,
 			);
 			path = Network;
@@ -692,6 +697,7 @@
 				D2A25DDA1D9D709500114E01 /* YTKBaseRequest+AnimatingAccessory.m in Sources */,
 				D2A25DDB1D9D709500114E01 /* YTKBatchRequest+AnimatingAccessory.m in Sources */,
 				D2A25DCB1D9D633C00114E01 /* ViewController.m in Sources */,
+				0C26D61B1DAA3BEE00FD3839 /* ZCHTTPError.m in Sources */,
 				0C9E7DE01D9D1499009D006C /* ZCBaseRequest.m in Sources */,
 				0CE39BEE1D87F29E00BDBFE4 /* AppDelegate.m in Sources */,
 				0C9E7DDC1D9CFF60009D006C /* ZCTYKTestViewController.m in Sources */,

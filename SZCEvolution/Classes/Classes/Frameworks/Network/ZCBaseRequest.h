@@ -9,7 +9,14 @@
 #import <YTKNetwork/YTKNetwork.h>
 #import "YTKBaseRequest+AnimatingAccessory.h"
 
+
+#define BASERequest  (ZCBaseRequest*)request
+
+@class ZCHTTPError;
+
 @interface ZCBaseRequest : YTKRequest
+
+@property (nonatomic,strong) ZCHTTPError * httpError;
 
 @end
 /*
