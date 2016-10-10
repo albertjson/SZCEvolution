@@ -9,28 +9,40 @@
 #import "ZCBaseRequest.h"
 #import "ZCHTTPError.h"
 #import <AFNetworking.h>
-#import <JSONModel.h>
 
 @interface ZCBaseRequest()
 {
-    id _responseModel;
+    //UIView * _showView;
 }
-
 @end
 
 @implementation ZCBaseRequest
 
-- (instancetype)getParseJSONModel
+//- (instancetype)initWithAnimatingView:(UIView*)aView
+//{
+//    self = [super init];
+//    if (self) {
+//        _showView = aView;
+//        [self initialize];
+//    }
+//    return self;
+//}
+- (instancetype)init
 {
-    NSString * modelClassName = [self modelClassName];
-    if (modelClassName==nil||[modelClassName isEqualToString:@""]) {
-        return self.responseJSONObject;
+    self = [super init];
+    if (self) {
+        [self initialize];
     }
-    return _responseModel;
+    return self;
 }
-- (NSString*)modelClassName;
+- (void)initialize
 {
-    return nil;
+    self.animatingText = @"";
+}
+
+- (BOOL)isHideErrorToast
+{
+    return NO;
 }
 /*
  1. 若需要定义json--model，可在以下方法中处理  class ： YTKNetworkAgent
@@ -59,47 +71,21 @@
 ///  cache is loaded, this method WILL be called on the main thread, just like `requestCompleteFilter`.
 - (void)requestCompletePreprocessor
 {
+    [super requestCompletePreprocessor];
     //json转model
-    [self JSONConvertModel];
-}
-- (void)JSONConvertModel
-{
-    NSLog(@"---%@",[self modelClassName]);
-    
-    NSString * modelClassName = [self modelClassName];
-    if (!modelClassName||[modelClassName isEqualToString:@""]) {
-        return;
-    }
-    Class modelClass = NSClassFromString(modelClassName);
-    
-    NSError * error = nil;
-    
-    if ([self.responseJSONObject isKindOfClass:[NSDictionary class]]) {
-        
-        _responseModel = [[modelClass alloc] initWithDictionary:self.responseJSONObject error:&error];
-        
-    }else if ([self.responseJSONObject isKindOfClass:[NSArray class]]){
-        
-        _responseModel = [modelClass arrayOfModelsFromDictionaries:self.responseJSONObject error:&error];
-        
-    }else{
-        //此处为请求成功但是返回的数据既不是字典又不是数组，理论上是"<null>"但是这里不需要做处理,AF已过滤掉
-    }
-    
-    //后面可以换成断言
-    NSLog(@"[ZCBaseRequest]--[JSONMODELError]=%@",error);
 }
 
 ///  Called on the main thread after request succeeded.
 - (void)requestCompleteFilter
 {
-    
+    [super requestCompleteFilter];
 }
 
 ///  Called on background thread after request succeded but before switching to main thread. See also
 ///  `requestCompletePreprocessor`.
 - (void)requestFailedPreprocessor
 {
+    [super requestFailedPreprocessor];
     //可以在此方法内处理token失效的情况，所有http请求统一走此方法，即会统一调用
 
     //note：子类如需继承，必须必须调用 [super requestFailedPreprocessor];
@@ -120,12 +106,68 @@
     }
     //初始化httpError的值
     //self.httpError = [[ZCHTTPError alloc] initWithDomain:<#(nonnull NSErrorDomain)#> code:<#(NSInteger)#> userInfo:<#(nullable NSDictionary *)#>];
-
+    
+    if (![self isHideErrorToast]) {
+        UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+        
+        UIViewController * controller = [self findBestViewController:window.rootViewController];
+        
+        [WMHUDUntil showFailWithMessage:error.localizedDescription toView:controller.view];
+    }
 }
 
 ///  Called on the main thread when request failed.
 - (void)requestFailedFilter
 {
+    [super requestFailedFilter];
+}
+- (NSInteger)cacheTimeInSeconds
+{
+    return 60*3;
+}
+
+
+#pragma mark - private method
+- (UIViewController*) findBestViewController:(UIViewController*)vc {
+    
+    if (vc.presentedViewController) {
+        
+        // Return presented view controller
+        return [self findBestViewController:vc.presentedViewController];
+        
+    } else if ([vc isKindOfClass:[UISplitViewController class]]) {
+        
+        // Return right hand side
+        UISplitViewController* svc = (UISplitViewController*) vc;
+        if (svc.viewControllers.count > 0)
+            return [self findBestViewController:svc.viewControllers.lastObject];
+        else
+            return vc;
+        
+    } else if ([vc isKindOfClass:[UINavigationController class]]) {
+        
+        // Return top view
+        UINavigationController* svc = (UINavigationController*) vc;
+        if (svc.viewControllers.count > 0)
+            return [self findBestViewController:svc.topViewController];
+        else
+            return vc;
+        
+    } else if ([vc isKindOfClass:[UITabBarController class]]) {
+        
+        // Return visible view
+        UITabBarController* svc = (UITabBarController*) vc;
+        if (svc.viewControllers.count > 0)
+            return [self findBestViewController:svc.selectedViewController];
+        else
+            return vc;
+        
+    } else {
+        
+        // Unknown view controller type, return last child view controller
+        return vc;
+        
+    }
     
 }
 

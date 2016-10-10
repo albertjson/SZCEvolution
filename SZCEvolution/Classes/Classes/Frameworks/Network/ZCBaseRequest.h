@@ -8,22 +8,18 @@
 
 #import <YTKNetwork/YTKNetwork.h>
 #import "YTKBaseRequest+AnimatingAccessory.h"
-
-
-#define BASERequest  (ZCBaseRequest*)request
+#import <WMHUDUntil.h>
 
 @class ZCHTTPError;
-@class ZCJSONModel;
 
 @interface ZCBaseRequest : YTKRequest
 
+//初始化方法，指定loading所在的页面，如果用init方法需要自己指定动画页面，不需要动画则不用指定view
+//- (instancetype)initWithAnimatingView:(UIView*)aView;
+//
 @property (nonatomic,strong) ZCHTTPError * httpError;
 
-//获取解析成model的数据<子类只能去调用不能重写>
-- (instancetype)getParseJSONModel;
-
-// model对应的类名，子类实现的话会直接映射到该model类并进行初始化操作
-- (NSString*)modelClassName;
+- (BOOL)isHideErrorToast;
 
 @end
 /*

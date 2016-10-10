@@ -7,11 +7,8 @@
 //
 
 #import "ZCBaseRequest.h"
-#import "ZCGetInfoModel.h"
 
 
 @interface ZCMeGetInfoManger : ZCBaseRequest
-
-@property (nonatomic,strong,readonly) ZCGetInfoModel * result;
 
 @end

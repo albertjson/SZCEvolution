@@ -31,19 +31,30 @@
     switch (sender.tag) {
         case 1:
         {
-            manger = [ZCMeGetInfoManger new];
-            manger.animatingView = self.view;
+            manger = [[ZCMeGetInfoManger alloc] initWithAnimatingView:self.view];
+            
+            if ([manger loadCacheWithError:nil]) {
+                NSLog(@"fromCache = %@",manger.responseJSONObject);
+            }
+            
+            __weak ZCMeGetInfoManger * mangerweak = manger;
             //manger.animatingText = @"加载中";
-            [manger startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
-                NSLog(@"heheda = %@",BASERequest.responseJSONObject);
-                NSLog(@"jjjjj=%@",manger.result);
-                                
-            } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
-                
-                NSLog(@"fail = %@",BASERequest.error);
-                //[WMHUDUntil showFailWithMessage:@"难道就失败了吗" toView:self.view];
-
+            [manger startWithoutCache];
+            [manger setCompletionBlockWithSuccess:^(__kindof ZCMeGetInfoManger * _Nonnull request) {
+                NSLog(@"jiong=%@",mangerweak.responseJSONObject);
+            } failure:^(__kindof ZCMeGetInfoManger * _Nonnull request) {
+                NSLog(@"wuwuwu=%@",mangerweak.error);
             }];
+//            [manger startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+//                NSLog(@"heheda = %@",BASERequest.responseJSONObject);
+//                NSLog(@"jjjjj=%@",manger.result);
+//                                
+//            } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+//                
+//                NSLog(@"fail = %@",BASERequest.error);
+//                //[WMHUDUntil showFailWithMessage:@"难道就失败了吗" toView:self.view];
+//
+//            }];
         }
             break;
         case 2:

@@ -31,7 +31,7 @@ PODS:
   - OHHTTPStubs/NSURLSession (5.2.1):
     - OHHTTPStubs/Core
   - OHHTTPStubs/OHPathHelpers (5.2.1)
-  - WMHUDUntil (0.0.2):
+  - WMHUDUntil (0.0.3):
     - MBProgressHUD
   - YTKNetwork (2.0.1):
     - AFNetworking (~> 3.0)
@@ -60,7 +60,7 @@ SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
-  WMHUDUntil: 1e054207ea4f1632bbb224261b2623a69674c35d
+  WMHUDUntil: dc23317a190c8ffadd04db06c0232ad2b5412dcc
   YTKNetwork: f21ad2073b3353a11d257593a2859f2904bbec75
 
 COCOAPODS: 0.39.0

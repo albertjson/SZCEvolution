@@ -8,7 +8,7 @@
 
 #import "WMHUDUntil.h"
 
-BOOL HUDAnimated = YES;
+BOOL HUDAnimated = NO;
 
 NSTimeInterval delay = 2;
 
