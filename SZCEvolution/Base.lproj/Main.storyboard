@@ -59,7 +59,7 @@
                                         <rect key="frame" x="0.0" y="64" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VPv-6d-7Zx" id="dth-ed-e4h">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -67,7 +67,7 @@
                                         <rect key="frame" x="0.0" y="108" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JrS-rN-gOx" id="A7S-Gu-WIH">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -75,7 +75,7 @@
                                         <rect key="frame" x="0.0" y="152" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fbv-mn-ue9" id="1GL-IZ-S6S">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -157,14 +157,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5ig-Nx-KHh"/>
                                 </constraints>
-                                <state key="normal" title="get"/>
+                                <state key="normal" title="缓存周期内读取缓存10s"/>
                                 <connections>
                                     <action selector="buttonAction:" destination="5ZZ-x4-Xuv" eventType="touchUpInside" id="nih-U0-DX0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLt-sh-Lmr">
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="post"/>
+                                <state key="normal" title="缓存并获取数据"/>
                                 <connections>
                                     <action selector="buttonAction:" destination="5ZZ-x4-Xuv" eventType="touchUpInside" id="9nf-H6-W48"/>
                                 </connections>
@@ -186,11 +186,17 @@
                                     <action selector="buttonAction:" destination="5ZZ-x4-Xuv" eventType="touchUpInside" id="xGG-zC-Jw9"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nKI-9e-zA0">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="xkU-yJ-Hl0" firstAttribute="top" secondItem="EjJ-Yg-cog" secondAttribute="bottom" constant="8" id="0VN-gE-0XD"/>
                             <constraint firstItem="kRd-il-Wlg" firstAttribute="trailing" secondItem="LIU-u0-PsO" secondAttribute="trailingMargin" id="4EC-9k-KCX"/>
+                            <constraint firstItem="8fU-6v-MUv" firstAttribute="top" secondItem="nKI-9e-zA0" secondAttribute="bottom" constant="8" id="4Mx-jd-8tW"/>
                             <constraint firstItem="JLt-sh-Lmr" firstAttribute="trailing" secondItem="LIU-u0-PsO" secondAttribute="trailingMargin" id="8Lc-Ng-M7S"/>
                             <constraint firstItem="JLt-sh-Lmr" firstAttribute="leading" secondItem="xkU-yJ-Hl0" secondAttribute="trailing" constant="16" id="A2X-Rh-Kxk"/>
                             <constraint firstItem="5u2-va-Qf4" firstAttribute="top" secondItem="xkU-yJ-Hl0" secondAttribute="bottom" constant="8" id="AoX-eD-oLZ"/>
@@ -198,14 +204,20 @@
                             <constraint firstItem="5u2-va-Qf4" firstAttribute="leading" secondItem="LIU-u0-PsO" secondAttribute="leadingMargin" id="HwW-Kz-SVu"/>
                             <constraint firstItem="kRd-il-Wlg" firstAttribute="leading" secondItem="5u2-va-Qf4" secondAttribute="trailing" constant="16" id="LqI-9H-PzU"/>
                             <constraint firstItem="xkU-yJ-Hl0" firstAttribute="leading" secondItem="LIU-u0-PsO" secondAttribute="leadingMargin" id="M4V-wk-85p"/>
+                            <constraint firstItem="nKI-9e-zA0" firstAttribute="trailing" secondItem="LIU-u0-PsO" secondAttribute="trailingMargin" id="PZA-au-NU6"/>
                             <constraint firstItem="JLt-sh-Lmr" firstAttribute="height" secondItem="xkU-yJ-Hl0" secondAttribute="height" id="Svu-QC-Ffw"/>
                             <constraint firstItem="kRd-il-Wlg" firstAttribute="height" secondItem="5u2-va-Qf4" secondAttribute="height" id="bAJ-IN-KGB"/>
                             <constraint firstItem="kRd-il-Wlg" firstAttribute="top" secondItem="5u2-va-Qf4" secondAttribute="top" id="d1P-sM-bq5"/>
+                            <constraint firstItem="nKI-9e-zA0" firstAttribute="top" secondItem="kRd-il-Wlg" secondAttribute="bottom" constant="15" id="fGL-Ta-kvz"/>
                             <constraint firstItem="JLt-sh-Lmr" firstAttribute="width" secondItem="xkU-yJ-Hl0" secondAttribute="width" id="g5j-on-pz6"/>
                             <constraint firstItem="kRd-il-Wlg" firstAttribute="width" secondItem="5u2-va-Qf4" secondAttribute="width" id="s9j-Jd-B6t"/>
+                            <constraint firstItem="nKI-9e-zA0" firstAttribute="leading" secondItem="LIU-u0-PsO" secondAttribute="leadingMargin" id="tLj-nN-Klg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="YTKNetwork" id="q1Q-UD-jiy"/>
+                    <connections>
+                        <outlet property="textView" destination="nKI-9e-zA0" id="Afo-Dy-P6Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hdc-JD-SCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -28,7 +28,7 @@
         
         NSString * urlString = request.URL.absoluteString;
         
-        if ([urlString containsString:@"http://www.baidu.com"]) {
+        if ([urlString containsString:@"user/info"]) {
             return YES;
         }
         //else if (<#expression#>){}
@@ -37,14 +37,32 @@
         
         NSString * urlString = request.URL.absoluteString;
         
-        if ([urlString containsString:@"http://www.baidu.com"]) {
+        if ([urlString containsString:@"user/info"]) {
+            
+            NSString * userNick = @"沉香";
+            
+            if ([urlString containsString:@"userId=1"]) {
+                userNick = @"益智仁";
+            }else if ([urlString containsString:@"userId=2"]){
+                userNick = @"艾叶";
+            }else if ([urlString containsString:@"userId=3"]){
+                userNick = @"竹叶";
+            }else if ([urlString containsString:@"userId=4"]){
+                userNick = @"茭白";
+            }
             
 //            NSError* notConnectedError = [NSError errorWithDomain:NSURLErrorDomain code:kCFURLErrorNotConnectedToInternet userInfo:nil];
 //            return [OHHTTPStubsResponse responseWithError:notConnectedError];
             
-            return [[OHHTTPStubsResponse responseWithJSONObject:@{@"ADAPTER2":@"http://m6.g13p.com/j0/girl13.com-2016-09-26-16-57-08_7h.jpg",@"haha":[NSNull null]} statusCode:statusCode headers:nil] requestTime:requestTime responseTime:responseTime];
+            return [[OHHTTPStubsResponse responseWithJSONObject:@{@"userNick":userNick,
+                                                                  @"userAge":@35,
+                                                                  @"userSex":@1,
+                                                                  @"userSignature":@"我是一个iOS工程师"}
+                                                     statusCode:statusCode headers:nil]
+                    requestTime:requestTime
+                    responseTime:responseTime];
         }
-        //else if (<#expression#>){}
+        //else if ([urlString containsString:@"iphone/images/1.jpg"]){}
         return nil;
     }];
 }

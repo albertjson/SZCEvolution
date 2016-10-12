@@ -44,6 +44,17 @@
 {
     return NO;
 }
+
+//缓存时间<使用默认的start，在缓存周期内并没有真正发起请求>
+- (NSInteger)cacheTimeInSeconds
+{
+    return 60;
+}
+//请求超时时间
+- (NSTimeInterval)requestTimeoutInterval
+{
+    return 60;
+}
 /*
  1. 若需要定义json--model，可在以下方法中处理  class ： YTKNetworkAgent
  - (void)handleRequestResult:(NSURLSessionTask *)task responseObject:(id)responseObject
@@ -88,6 +99,9 @@
     [super requestFailedPreprocessor];
     //可以在此方法内处理token失效的情况，所有http请求统一走此方法，即会统一调用
 
+    //如果部分服务端的失败以成功的方式返回给客户端，那么可以重写- (void)setCompletionBlockWithSuccess:(nullable YTKRequestCompletionBlock)success
+//failure:(nullable YTKRequestCompletionBlock)failure 方法，不过这个时候如果程序中有用到代理的话代理也要重写
+    
     //note：子类如需继承，必须必须调用 [super requestFailedPreprocessor];
     
     NSError * error = self.error;
@@ -106,26 +120,22 @@
     }
     //初始化httpError的值
     //self.httpError = [[ZCHTTPError alloc] initWithDomain:<#(nonnull NSErrorDomain)#> code:<#(NSInteger)#> userInfo:<#(nullable NSDictionary *)#>];
-    
-    if (![self isHideErrorToast]) {
-        UIWindow * window = [[UIApplication sharedApplication] keyWindow];
-        
-        UIViewController * controller = [self findBestViewController:window.rootViewController];
-        
-        [WMHUDUntil showFailWithMessage:error.localizedDescription toView:controller.view];
-    }
 }
 
 ///  Called on the main thread when request failed.
 - (void)requestFailedFilter
 {
     [super requestFailedFilter];
-}
-- (NSInteger)cacheTimeInSeconds
-{
-    return 60*3;
-}
+    
+    if (![self isHideErrorToast]) {
+        UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+        
+        UIViewController * controller = [self findBestViewController:window.rootViewController];
+        
+        [WMHUDUntil showFailWithMessage:self.error.localizedDescription toView:controller.view];
+    }
 
+}
 
 #pragma mark - private method
 - (UIViewController*) findBestViewController:(UIViewController*)vc {

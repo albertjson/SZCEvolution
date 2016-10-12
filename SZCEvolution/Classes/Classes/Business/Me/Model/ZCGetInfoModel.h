@@ -10,8 +10,12 @@
 
 @interface ZCGetInfoModel : ZCJSONModel
 
-@property (nonatomic,copy) NSString * ADAPTER2;
+@property (nonatomic,copy) NSString * userNick;
 
-@property (nonatomic,copy) NSString<Optional> * haha;
+@property (nonatomic,assign) NSInteger userAge;
+
+@property (nonatomic,assign) BOOL userSex;
+
+@property (nonatomic,copy) NSString<Optional> * userSignature;
 
 @end

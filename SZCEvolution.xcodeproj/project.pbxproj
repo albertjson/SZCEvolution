@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0C4EEB1DACC1C5004A2006 /* ZCGetInfoParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0C4EEA1DACC1C5004A2006 /* ZCGetInfoParam.m */; };
 		0C26D61B1DAA3BEE00FD3839 /* ZCHTTPError.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C26D61A1DAA3BEE00FD3839 /* ZCHTTPError.m */; };
 		0C9E7DD31D9CFDD7009D006C /* ZCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7DD21D9CFDD7009D006C /* ZCBaseViewController.m */; };
 		0C9E7DD61D9CFDED009D006C /* ZCBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7DD51D9CFDED009D006C /* ZCBaseTableViewController.m */; };
@@ -15,6 +16,8 @@
 		0C9E7DE01D9D1499009D006C /* ZCBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7DDF1D9D1499009D006C /* ZCBaseRequest.m */; };
 		0C9E7DE31D9D150F009D006C /* ZCMeGetInfoManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7DE21D9D150F009D006C /* ZCMeGetInfoManger.m */; };
 		0C9E7DE71D9D16C7009D006C /* ZCMockHttpUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E7DE61D9D16C7009D006C /* ZCMockHttpUtil.m */; };
+		0CB410FD1DAE2B6B00C368EB /* ZCBatchRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB410FC1DAE2B6B00C368EB /* ZCBatchRequest.m */; };
+		0CB411001DAE2B8E00C368EB /* ZCChainRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB410FF1DAE2B8E00C368EB /* ZCChainRequest.m */; };
 		0CE39BEB1D87F29E00BDBFE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE39BEA1D87F29E00BDBFE4 /* main.m */; };
 		0CE39BEE1D87F29E00BDBFE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CE39BED1D87F29E00BDBFE4 /* AppDelegate.m */; };
 		0CE39BF41D87F29E00BDBFE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CE39BF21D87F29E00BDBFE4 /* Main.storyboard */; };
@@ -50,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0C4EE91DACC1C5004A2006 /* ZCGetInfoParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCGetInfoParam.h; sourceTree = "<group>"; };
+		0C0C4EEA1DACC1C5004A2006 /* ZCGetInfoParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCGetInfoParam.m; sourceTree = "<group>"; };
 		0C26D6191DAA3BEE00FD3839 /* ZCHTTPError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCHTTPError.h; sourceTree = "<group>"; };
 		0C26D61A1DAA3BEE00FD3839 /* ZCHTTPError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCHTTPError.m; sourceTree = "<group>"; };
 		0C9E7DD11D9CFDD7009D006C /* ZCBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBaseViewController.h; sourceTree = "<group>"; };
@@ -67,6 +72,10 @@
 		0C9E7DE21D9D150F009D006C /* ZCMeGetInfoManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMeGetInfoManger.m; sourceTree = "<group>"; };
 		0C9E7DE51D9D16C7009D006C /* ZCMockHttpUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMockHttpUtil.h; sourceTree = "<group>"; };
 		0C9E7DE61D9D16C7009D006C /* ZCMockHttpUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMockHttpUtil.m; sourceTree = "<group>"; };
+		0CB410FB1DAE2B6B00C368EB /* ZCBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCBatchRequest.h; sourceTree = "<group>"; };
+		0CB410FC1DAE2B6B00C368EB /* ZCBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCBatchRequest.m; sourceTree = "<group>"; };
+		0CB410FE1DAE2B8E00C368EB /* ZCChainRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCChainRequest.h; sourceTree = "<group>"; };
+		0CB410FF1DAE2B8E00C368EB /* ZCChainRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCChainRequest.m; sourceTree = "<group>"; };
 		0CE39BE61D87F29E00BDBFE4 /* SZCEvolution.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZCEvolution.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CE39BEA1D87F29E00BDBFE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0CE39BEC1D87F29E00BDBFE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SZCEvolution/AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -285,6 +294,8 @@
 		0C9E7DC21D9CFC94009D006C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C0C4EE91DACC1C5004A2006 /* ZCGetInfoParam.h */,
+				0C0C4EEA1DACC1C5004A2006 /* ZCGetInfoParam.m */,
 				0C9E7DE11D9D150F009D006C /* ZCMeGetInfoManger.h */,
 				0C9E7DE21D9D150F009D006C /* ZCMeGetInfoManger.m */,
 				D20104071DAA90FB00F0E7E2 /* ZCGetInfoModel.h */,
@@ -359,6 +370,10 @@
 			children = (
 				0C9E7DDE1D9D1499009D006C /* ZCBaseRequest.h */,
 				0C9E7DDF1D9D1499009D006C /* ZCBaseRequest.m */,
+				0CB410FB1DAE2B6B00C368EB /* ZCBatchRequest.h */,
+				0CB410FC1DAE2B6B00C368EB /* ZCBatchRequest.m */,
+				0CB410FE1DAE2B8E00C368EB /* ZCChainRequest.h */,
+				0CB410FF1DAE2B8E00C368EB /* ZCChainRequest.m */,
 				0C26D6191DAA3BEE00FD3839 /* ZCHTTPError.h */,
 				0C26D61A1DAA3BEE00FD3839 /* ZCHTTPError.m */,
 				D20104041DAA8FE700F0E7E2 /* ZCJSONModel.h */,
@@ -698,9 +713,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CB411001DAE2B8E00C368EB /* ZCChainRequest.m in Sources */,
 				D20104091DAA90FB00F0E7E2 /* ZCGetInfoModel.m in Sources */,
+				0CB410FD1DAE2B6B00C368EB /* ZCBatchRequest.m in Sources */,
 				D20104061DAA8FE700F0E7E2 /* ZCJSONModel.m in Sources */,
 				D2A25DD91D9D709500114E01 /* YTKAnimatingRequestAccessory.m in Sources */,
+				0C0C4EEB1DACC1C5004A2006 /* ZCGetInfoParam.m in Sources */,
 				0C9E7DD31D9CFDD7009D006C /* ZCBaseViewController.m in Sources */,
 				0C9E7DE31D9D150F009D006C /* ZCMeGetInfoManger.m in Sources */,
 				0C9E7DD61D9CFDED009D006C /* ZCBaseTableViewController.m in Sources */,

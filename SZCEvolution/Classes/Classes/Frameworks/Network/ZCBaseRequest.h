@@ -24,5 +24,5 @@
 @end
 /*
  1. 取消网络请求，在dealloc中调用 [request stop]方法
- 2. 
+ 2. 建议：入餐/出餐三个以上要用JsonModel，方便使用和维护
  */
